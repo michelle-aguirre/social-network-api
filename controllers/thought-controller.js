@@ -51,11 +51,11 @@ const thoughtController = {
     },
     // update thought
     updateThought(req, res) {
-        Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { run })
+        Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { run })};
             .then((dbThoughtData) => {
                 if (!dbThoughtData) {
                     if (!dbThoughtData) {
-                        return res.status(404).json({ message: 'No thought with this id!' });
+                        return res.status(404).json({ message: 'No thought with this id!' })};
                     }
                     res.json(dbThoughtData);  
             })
